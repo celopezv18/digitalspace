@@ -88,6 +88,7 @@ export default function UserForm(){
           <form onSubmit={onSubmit}>
             <input required value={user.name.split('---')[0]} onChange={ev => setUsers({...user, name: ev.target.value})} placeholder="Nombre"/>
             <input required value={user.email} onChange={ev => setUsers({...user, email: ev.target.value})} placeholder="Email"/>
+            {id && (
             <select required  
             onChange={ev => setUsers({...user, rol: ev.target.value})} 
             value={user.name.split('---')[1] === 'Administrador' ? 'Administrador' : 'Funcionario'}>
@@ -95,6 +96,16 @@ export default function UserForm(){
                 <option value='Administrador'>Administrador</option>
                 <option value='Funcionario'>Funcionario</option>
             </select>
+            )}
+            {!id && (
+            <select required  
+            onChange={ev => setUsers({...user, rol: ev.target.value})} 
+            value=''>
+                <option value=''>Rol</option>
+                <option value='Administrador'>Administrador</option>
+                <option value='Funcionario'>Funcionario</option>
+            </select>
+            )}
             {!id && (
                 <input required type="password" onChange={ev => setUsers({...user, password: ev.target.value})} placeholder="Contraseña"/>
             )}
