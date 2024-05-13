@@ -8,3 +8,8 @@ El endpoint para el backend (laravel) se encuentra en react-laravel-crud/src/axi
 const axiosClient = axios.create({
     baseURL: "http://127.0.0.1:8000/api",
 });
+
+Para correr el proyecto en el frontend ir a react-laravel-crud y correr 'npm install' y luego
+'npm run dev'
+
+Para el backend (directorio raíz) correr: 'php artisan serve'
