@@ -13,3 +13,7 @@ Para correr el proyecto en el frontend ir a react-laravel-crud y correr 'npm ins
 'npm run dev'
 
 Para el backend (directorio raíz) correr: 'php artisan serve'
+
+Para ingresar a la aplicación como usuario administrador usar los datos:
+usuario: admin@admin.com
+contraseña: 12345678a
