@@ -88,8 +88,9 @@ export default function UserForm(){
           <form onSubmit={onSubmit}>
             <input required value={user.name.split('---')[0]} onChange={ev => setUsers({...user, name: ev.target.value})} placeholder="Nombre"/>
             <input required value={user.email} onChange={ev => setUsers({...user, email: ev.target.value})} placeholder="Email"/>
-            <select required defaultValue={user.name.split('---')[1]}  
-            onChange={ev => setUsers({...user, rol: ev.target.value})}>
+            <select required  
+            onChange={ev => setUsers({...user, rol: ev.target.value})} 
+            value={user.name.split('---')[1] === 'Administrador' ? 'Administrador' : 'Funcionario'}>
                 <option value=''>Rol</option>
                 <option value='Administrador'>Administrador</option>
                 <option value='Funcionario'>Funcionario</option>
